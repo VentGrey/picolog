@@ -46,6 +46,7 @@ package main
 import "github.com/VentGrey/picolog"
 
 func main() {
+    // picolog has colored output disabled by default.
     logger := picolog.NewLogger("main", picolog.Info, false)
     
     logger.Info("This is an info message")
