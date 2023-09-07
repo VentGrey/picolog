@@ -1,5 +1,7 @@
 # 🌲 Picolog 🌲
 
+[![Go CI](https://github.com/VentGrey/picolog/actions/workflows/go.yml/badge.svg)](https://github.com/VentGrey/picolog/actions/workflows/go.yml)
+
 Picolog is my personal minimalistic logging library written in Go. Designed for simplicity and ease of use, it's perfect for very small projects where you need a quick and easy logging format without the hassle. Think of it as a tiny reliable friend for minimal debug and information tracking! 🐞
 
 ## 🌟 Features
