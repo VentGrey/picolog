@@ -36,6 +36,47 @@ If you wish to read a richer output:
 go test -v
 ```
 
+### ⚙ Examples
+
+You can find some examples in the [examples](examples) directory.
+
+These examples include:
+
+#### Log Faker using picolog
+
+`fake_log_generator.go` is a simple log generator that uses picolog to generate fake logs. It's a good example of how you can use picolog in your project.
+
+#### Python script to plot error messages
+
+A simple python script that reads a generated logfile and plots the number of error ocurrences. It's a good example of how you can use picolog to generate logs and then use them in other applications.
+
+#### Python script to plot log level ocurrences
+
+Another simple python script that reads a generated logfile and plots the number of ocurrences of each log level. It's a good example of how you can use picolog to generate logs and then use them in other applications.
+
+Try extending those scripts o make a Go parser that sends that data to a database, your preffered metrics tool or observability platform.
+
+#### A pre-generated fake log file
+
+`fake_log.txt` is a pre-generated fake log file that you can use to test the python scripts.
+You can generate your own log file by running `fake_log_generator.go` or using Picolog in your own project.
+
+## 📝 Documentation
+
+To view the documentation, run:
+
+```bash
+godoc -http=:6060
+```
+
+Then open your browser and go to `http://localhost:6060/pkg/github.com/VentGrey/picolog/`.
+
+Alternatively you can view the documentation in your terminal by running:
+
+```bash
+godoc github.com/VentGrey/picolog
+```
+
 ## 📚 Usage
 
 Here's how you can start using Picolog in your project.
@@ -49,12 +90,22 @@ func main() {
     // picolog has colored output disabled by default.
     logger := picolog.NewLogger("main", picolog.Info, false)
     
-    logger.Info("This is an info message")
-    logger.Debug("This is a debug message")
-    logger.Warning("This is a warning message")
-    logger.Error("This is an error message")
-    logger.Ok("This is an ok message")
+    logger.Log(picolog.Info, "This is an info message")
+    logger.Log(picolog.Debug, "This is a debug message")
+    logger.Log(picolog.Warning, "This is a warning message")
+    logger.Log(picolog.Error, "This is an error message")
+    logger.Log(picolog.Ok, "This is an ok message")
 }
+```
+
+The output of this program will be:
+
+```
+[INFO] - 2023-09-06 20:28:59 : This is an info message - At package: main
+[DEBUG] - 2023-09-06 20:28:59 : This is a debug message - At package: main
+[WARNING] - 2023-09-06 20:28:59 : This is a warning message - At package: main
+[ERROR] - 2023-09-06 20:28:59 : This is an error message - At package: main
+[OK] - 2023-09-06 20:28:59 : This is an ok message - At package: main
 ```
 
 ## 🚀 Advanced Usage
