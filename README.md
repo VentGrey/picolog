@@ -76,7 +76,7 @@ Then open your browser and go to `http://localhost:6060/pkg/github.com/VentGrey/
 Alternatively you can view the documentation in your terminal by running:
 
 ```bash
-godoc github.com/VentGrey/picolog
+go doc github.com/VentGrey/picolog
 ```
 
 ## 📚 Usage
