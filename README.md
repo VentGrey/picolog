@@ -2,6 +2,8 @@
 
 [![Go CI](https://github.com/VentGrey/picolog/actions/workflows/go.yml/badge.svg)](https://github.com/VentGrey/picolog/actions/workflows/go.yml)
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/VentGrey/picolog.svg)](https://pkg.go.dev/github.com/VentGrey/picolog)
+
 Picolog is my personal minimalistic logging library written in Go. Designed for simplicity and ease of use, it's perfect for very small projects where you need a quick and easy logging format without the hassle. Think of it as a tiny reliable friend for minimal debug and information tracking! 🐞
 
 ## 🌟 Features
@@ -18,7 +20,7 @@ Picolog is my personal minimalistic logging library written in Go. Designed for 
 
 ## 📦 Installation
 
-This package is not published on the Go package registry, so you'll have to install it manually.
+To install picolog, simply run this command in your Go project's route:
 
 ```bash
 go get -u github.com/VentGrey/picolog
